@@ -1,5 +1,5 @@
-import {createHash} from "node:crypto";
-export default function(obj, algorithm, encoding = "hex") {
+const {createHash} = require("node:crypto");
+module.exports = function(obj, algorithm, encoding = "hex") {
 	const hash = createHash(algorithm);
 	updateHash(hash, obj);
 	return hash.digest(encoding);

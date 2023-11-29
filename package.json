@@ -1,8 +1,8 @@
 {
   "name": "@flinbein/json-stable-hash",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
-  "type": "module",
+  "type": "commonjs",
   "main": "./index.js",
   "module": "./index.js",
   "types": "./index.d.ts",
