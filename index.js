@@ -15,7 +15,7 @@ function updateHash(hash, obj){
 		return;
 	}
 	if (obj instanceof TypedArray) {
-		hash.update("[typedArray:"+obj.constructor.name+":"+obj.byteLength+">");
+		hash.update("[typedArray:"+obj.constructor.name+":"+obj.byteLength+"]");
 		hash.update(obj);
 		return;
 	}
