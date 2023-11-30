@@ -1,12 +1,11 @@
 {
   "name": "@flinbein/json-stable-hash",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
-  "type": "commonjs",
   "main": "./index.js",
-  "module": "./index.js",
-  "types": "./index.d.ts",
-  "typings": "./index.d.ts",
+  "module": "./index.mjs",
+  "types": "./index.d.mts",
+  "typings": "./index.d.mts",
   "author": "dpohvar@gmail.com",
   "devDependencies": {
     "@types/node": "^20.10.1"
