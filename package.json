@@ -1,6 +1,6 @@
 {
   "name": "@flinbein/json-stable-hash",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "license": "MIT",
   "main": "./index.js",
   "module": "./index.mjs",
@@ -12,7 +12,7 @@
   },
   "exports": {
     ".": {
-      "browser": "./browser.js",
+      "browser": "./browser.mjs",
       "types": "./index.d.mjs",
       "import": "./index.mjs",
       "require": "./index.js",

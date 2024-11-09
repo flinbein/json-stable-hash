@@ -6,27 +6,26 @@ export default async function(obj, algorithm, encoding = "hex") {
 const TypedArray = Object.getPrototypeOf(Uint8Array);
 const encoder = new TextEncoder();
 class HashModel {
-	#data = new Uint8Array();
+	#data = new Uint8Array(0);
 	#algorithm
 	constructor(algorithm) {
 		this.#algorithm = algorithm;
 	}
 	update(value){
-		if (typeof value !== "string") {
-			this.#data.push(encoder.encode(value).buffer);
+		if (typeof value === "string") {
+			this.append(encoder.encode(value));
 			return;
 		}
 		if (value instanceof TypedArray){
-			this.append(new Uint8Array(value.buffer));
-		}
-		if (value instanceof ArrayBuffer){
 			this.append(new Uint8Array(value.buffer, value.byteLength, value.byteLength));
+			return;
 		}
 	}
 	append(data){
 		const newData = new Uint8Array(this.#data.byteLength + data.byteLength);
 		newData.set(this.#data);
 		newData.set(data, this.#data.byteLength);
+		this.#data = newData;
 	}
 	async digest(encoding){
 		const buf = this.#data.buffer.slice(this.#data.byteOffset, this.#data.byteOffset + this.#data.byteLength);
