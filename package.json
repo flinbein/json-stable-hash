@@ -1,6 +1,6 @@
 {
   "name": "@flinbein/json-stable-hash",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "license": "MIT",
   "main": "./index.js",
   "module": "./index.mjs",
@@ -17,6 +17,9 @@
       "import": "./index.mjs",
       "require": "./index.js",
       "default": "./index.js"
+    },
+    "./package.json": {
+      "default": "./package.json"
     }
   }
 }
